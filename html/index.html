@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../image/mcDonaldsLogo.png">
+    <title>McRapha</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="/image/mcDonaldsLogo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="textBox">
+                <!--A TAG SPAN é usada para um conteúdo parafraseado-->
+                <h2>Isto não é apenas um lanche<br>Isto é <span>RaphaDonalds</span></h2>
+                <p>
+                    McDonald's (MCD) is a fast food, limited service restaurant with more than 35,000 restaurants in over 100 countries. It employs more than four million people. McDonald's serves 70 million customers per day, which is greater than the population of France.
+                </p>
+                <a href="#">Veja mais</a>
+            </div>
+            <div class="imgBox">
+                <img src="/image/hamburguer.png" class="mcDonalds">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="/image/hamburguer.png" onclick="imgSlider('/image/hamburguer.png');changeCircleColor('#ff2d08')"></li> <!--Imagem que aparecerá e cor do circulo grande atrás da imagem-->
+            <li><img src="/image/mcChicken.png" onclick="imgSlider('/image/mcChicken.png');changeCircleColor('#b0fc38')"></li>
+            <li><img src="/image/batataFritaMCD.png" onclick="imgSlider('/image/batataFritaMCD.png');changeCircleColor('#fec208')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.instagram.com/raphhahenrique/"><img src="/image/instagram.png"></a></li>
+            <li><a href="https://br.linkedin.com/in/raphael-henrique-carvalho-17bba9222?trk=public_profile_browsemap"><img src="/image/linkedinLogo.png"></a></li>
+            <li><a href="https://github.com/raphhax/raphhax"><img src="/image/githubLogo.png"></a></li>
+        </ul>
+
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.mcDonalds').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%; /*Largura: cobre a página toda*/
+    min-height: 100vh; /*Altura minima de 100vh significa que tampa uma tela inteira ao menos*/
+    padding: 100px;
+    display: flex; /*Para fixar flexível e te permitir mecher nas posições horizontais e verticais do elemento*/
+    justify-content: space-between; /*Os itens são distribuídos uniformemente dentro do contêiner de alinhamento ao longo do eixo principal. O espaçamento entre cada par de itens adjacentes é o mesmo. O primeiro item está alinhado com a borda de início principal e o último item está alinhado com a borda de extremidade principal.*/
+    align-items: center; /*alinha todos os itens ao centro vertical da tela*/
+    background: #fff;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px; /*É um espaçamento interno*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative; /*Posicionamento da logo*/
+    max-width: 80px; /*Tamanho da logo*/
+}
+
+header ul{
+    position: relative;
+    display: flex; /*Solto*/
+}
+
+header ul li{
+    list-style: none; /*Estilo dos itens lista: nenhum, numéricos, etc*/
+}
+
+header ul li a{ /*Para os links dentro dos itens da lista do menu*/
+    display: inline-block;
+    color: #333;
+    font-weight: 400; /*Força da fonte = intensidade do negrito*/
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff2d08;
+    clip-path: circle(600px at right 800px);
+}
+
+.conteudo{ /*Configurações gerais para tudo o que estiver dentro de conteúdo*/
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.conteudo .textBox{ /*Configurações gerais para tudo que estiver no textBox dentro de conteúdo*/
+    position: relative;
+    max-width: 600px;
+}
+
+.conteudo .textBox h2{ /*Configurações para os paragrafos h2 que existirem na textBox dentro de conteúdo*/
+    color: #333;
+    font-size: 2.5em; /*'em' é simplesmente uma unidade para o tamanho da fonte e ela se adapta proporcionalmente ao tamanho da tela que estiver visualizando ela(ex: tablet, celular, pc, etc)*/
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.conteudo .textBox h2 span{ /*Configurações para tudo o que existir dentro de 'span' nos parágrafos h2 que existirem na textBox dentro de conteúdo*/
+    color: #ff2d08;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.conteudo .textBox p { /*Configurações gerais para todos os parágrafos dentro de textBox*/
+    color: #333;
+}
+
+.conteudo .textBox a{ /*Configurações para todos os links dentro de textBox presente no conteúdo*/
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #ff2d08;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.conteudo .textBox a:hover{
+    background:var(--clr);
+    background: #ff2d08;
+    color: #fec208;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px #ff2d08; /*Para efeito de luz brilhante no texto desejado*/
+}
+
+.conteudo .imgBox{ /*Image grande da direita*/
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.conteudo .imgBox img{
+    max-width: 340px;
+    filter: drop-shadow(0 0 25px rgba(255, 226, 3, 0.301)) drop-shadow(0 0 50px white); /*filtro que coloca efeito de brilho atras da imgem*/
+}
+
+.thumb{ /*As thumbs se referem aos sorvetes que estãi na parte de baixo*/
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li{
+    list-style: none; /*Remove as bolinhas da lista*/
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer; /*Personalização do cursor do mouse*/
+    transition: 0.5s;
+}
+.thumb li:hover{
+    transform: translateY(-15px); /*Serve para a imagem com os sorvetes se moverem no eixo Y(Para cima) quando passarmos o mouse sobre ela*/
+}
+
+.thumb li img{
+    max-width: 60px;
+}
+
+.sci{ /*Configuração das redes sociais*/
+    position:absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li{ /*Configuração da lista de redes sociais*/
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+
+.sci li img{    /*Logos redes sociais*/
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+    filter:invert(1);
+}
+
+.sci li img:hover{
+    opacity: 75%;
+    padding: 1px;
+}
